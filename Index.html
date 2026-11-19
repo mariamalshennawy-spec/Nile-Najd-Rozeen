@@ -1,0 +1,104 @@
+`html
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nile & Najd | النيل ونجد - Egyptian Creator Season 2</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display (English) + Cairo & Tajawal (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        arabic: ['"Cairo"', '"Tajawal"', 'sans-serif'],
+                    },
+                    colors: {
+                        nile: {
+                            50: '#f0f7fa',
+                            100: '#daecf4',
+                            600: '#166088',
+                            700: '#114b6b',
+                            800: '#0d3b54',
+                            900: '#082738',
+                            950: '#051924',
+                        },
+                        najd: {
+                            50: '#fbf8f1',
+                            100: '#f5eedc',
+                            300: '#e4c28b',
+                            400: '#d4a359',
+                            500: '#c58f3d',
+                            600: '#a6722a',
+                        },
+                        oasis: {
+                            600: '#157f5c',
+                            700: '#11664a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Dynamic Typography based on Document Direction */
+        html[dir="rtl"] body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+        }
+        html[dir="rtl"] .font-serif {
+            font-family: 'Cairo', sans-serif !important;
+        }
+        html[dir="ltr"] body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Subtle Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Glassmorphism Header */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Active Explorer Tab */
+        .tab-active {
+            border-bottom: 3px solid #c58f3d;
+            color: #0d3b54;
+            font-weight: 700;
+            background-color: rgba(245, 238, 220, 0.5);
+        }
+
+        /* Custom Scrollbar for AI Chat */
+        .chat-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .chat-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .chat-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-najd-50 text-slate-800 antialiased selection:bg-najd-400 selection:text-white">
+
+    <!-- Top Competition Banner -->
